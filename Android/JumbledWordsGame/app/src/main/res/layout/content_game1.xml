@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="0.02"
+        android:weightSum="1"
+        android:id="@+id/linear1">
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="62dp"
+            android:id="@+id/edit_message"
+            />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_weight="0.92" />
+
+        <ImageButton
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:id="@+id/help"
+            android:src="@drawable/help1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:onClick="help"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/button"
+            android:layout_alignBottom="@+id/button"
+            android:layout_toRightOf="@+id/button" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.12"
+        android:id="@+id/linear2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/ques"
+            android:gravity="center"
+            android:layout_above="@+id/status"
+            android:layout_alignLeft="@+id/status"
+            android:layout_alignStart="@+id/status"
+            android:layout_marginBottom="28dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/status"
+            android:layout_gravity="center" />
+
+        <ImageButton
+            android:layout_width="52dp"
+            android:layout_height="43dp"
+            android:id="@+id/restart"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/restart"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:onClick="restartRound" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="259dp"
+        android:id="@+id/vertical"
+        android:layout_weight="0.77"></LinearLayout>
+
+</LinearLayout>
