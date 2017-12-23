@@ -77,7 +77,8 @@ $result=mysql_query("SELECT firstname,lastname from passenger_details where id='
 		  $result=mysql_query("SELECT t1.seat+1 AS Missing FROM temp AS t1 LEFT JOIN temp AS t2 ON t1.seat+1 = t2.seat WHERE t2.seat IS NULL ORDER BY t1.seat LIMIT 1"); 
           $result=mysql_fetch_assoc($result);
 		  $seatno=$result['Missing'];
-		  } mysql_query("INSERT INTO temp values('$seatno')");
+		  }
+			mysql_query("INSERT INTO temp values('$seatno')");
 			mysql_query("INSERT INTO booked_tickets values('$ticketid','$userid','$train_no','$seatno','$waiting','$name','$age','$contact','$sex')");
 			
             mysql_query("UPDATE  train SET booked='$booked' where train_number='$train_no'");

@@ -172,11 +172,13 @@ public class Game extends Activity {
             if(duplicate[i]!=i)     //this is 2nd occurence
                if(!visited[duplicate[i]])    //if 1st occurence not present in word
                {
-                continue;}
+                continue;
+				}
 
             if(visited[i])
             {
-             continue;}           //if this char is already included in formed word
+             continue;
+			 }           //if this char is already included in formed word
 
           String key=(word.append(q[i])).toString();     //add next char to SB and convert to String
 
@@ -230,11 +232,12 @@ public class Game extends Activity {
 
                 text[key.length()][answered[key.length()]][i].setText(String.valueOf(key.charAt(i)));
 
-             answered[key.length()]++;}
+             answered[key.length()]++;
+		}
 
 
 
-else
+	else
         if(answeredSet.containsKey(key))
         {
              final int wordindex = answeredSet.get(key);

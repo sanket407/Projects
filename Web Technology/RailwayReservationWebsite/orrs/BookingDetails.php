@@ -9,7 +9,8 @@ session_start();
 	mysql_select_db('orrs');
 	if(!isset($_SESSION['userid']))
 		echo 'error';
-	else $userid=$_SESSION['userid'];
+	else 
+	{$userid=$_SESSION['userid'];
 	$result=mysql_query("SELECT firstname,lastname from passenger_details where id='$userid'") or die(err1);
 	$names=mysql_fetch_assoc($result);
 	$fname=$names['firstname'];
@@ -17,7 +18,7 @@ session_start();
 		
 		$welcome='WELCOME '.$fname.' '.$lname;
 		
-		
+	}
 		
 	}
 
